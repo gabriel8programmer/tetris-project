@@ -1,0 +1,174 @@
+
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* buttons */
+button {
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+
+/* main container */
+.container {
+  padding: 20px;
+}
+
+/* buttons */
+.container-buttons {
+  width: 300px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.container-buttons button {
+  padding: 10px 20px;
+  background-color: #1d3dfd;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+/* content game */
+.container-content {
+  display: flex;
+}
+
+/* grids */
+.container-content > .grid {
+  width: 200px;
+  height: 400px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, green, #5d7);
+  position: relative;
+}
+
+.grid .cell {
+  width: 20px;
+  height: 20px;
+}
+
+/* panel */
+.panel {
+  margin-left: 20px;
+}
+
+.panel > .grid {
+  width: 120px;
+  height: 120px;
+}
+
+.panel .score {
+  padding: 10px;
+}
+
+.panel .score #score {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ddd;
+  text-shadow: 0 0 5px #000;
+}
+
+/* gameover */
+#gameover {
+  width: 200px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 10px;
+}
+
+#gameover span {
+  color: red !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 3px white;
+}
+
+/* buttons */
+.buttons {
+  max-width: 250px;
+  margin-top: 20px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 64px);
+  gap: 10px;
+}
+
+.buttons button {
+  border:0;
+  border-radius: 5px;
+  background: linear-gradient(to right, #1d3dfd, #1d7dfd);
+}
+
+.buttons button span {
+  color: white;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+/*classes */
+.shape-painted {
+  border: 2px solid #000;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.gray-scale {
+  filter: grayscale(100%);
+}
+
+.shape-red {
+  background: linear-gradient(to right, red 30%, #f66, #fd8);
+}
+
+.shape-blue {
+  background: linear-gradient(to right, blue 30%, #07f, #0df);
+}
+
+.shape-pink {
+  background: linear-gradient(to right, #d07, pink);
+}
+
+.shape-yellow {
+  background: linear-gradient(to right, yellow 30%, #fa3, #f93);
+}
+
+.shape-purple {
+  background: linear-gradient(to right, purple, #50f);
+}
+
+.shape-black {
+  background: linear-gradient(to right, black 20%, #aaa, white);
+}
+
+.shape-white {
+  background: linear-gradient(to right, white, #999);
+}
+
+/*responsivity */
+@media (max-width: 950px){
+  .buttons {
+    display: grid;
+  }
+}
