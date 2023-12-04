@@ -131,7 +131,6 @@ function freezeGame(){
     currentShape = allShapes[randomShape][currentRotation]
     currentColor = nextColor
     
-    drawGame()
     displayNextShape()
     checkIfRowIsFilled()
     updateScore(10)
@@ -241,7 +240,7 @@ function gameOver(){
     
     $gridGame.classList.add("gray-scale")
     $gridPanel.classList.add("gray-scale")
-    $gameover.style.display = "flex"
+    $gameover.classList.add("flex")
   }
   
 }

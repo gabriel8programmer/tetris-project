@@ -131,7 +131,7 @@ button:disabled {
 }
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .gray-scale {
