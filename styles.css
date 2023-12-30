@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Consolas, sans-serif;
+}
+
 /* buttons */
 button {
   cursor: pointer;
@@ -75,10 +79,9 @@ button:disabled {
 }
 
 .panel .score #score {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #ddd;
-  text-shadow: 0 0 5px #000;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000;
 }
 
 /* gameover */
