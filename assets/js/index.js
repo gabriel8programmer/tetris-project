@@ -17,24 +17,24 @@ const panelWidth = 6
 
 //shapes 
 const tShapes = [
-  [1, gridWidth, gridWidth+1, gridWidth+2],
-  [1, gridWidth+1, gridWidth*2 +1, gridWidth+2],
-  [gridWidth, gridWidth+1, gridWidth+2, gridWidth*2 +1],
+  [0, 1, 2, gridWidth+1],
   [1, gridWidth, gridWidth+1, gridWidth*2 +1],
+  [1, gridWidth, gridWidth+1, gridWidth+2],
+  [0, gridWidth, gridWidth+1, gridWidth*2]
 ]
 
 const lShapes = [
-  [0, gridWidth, gridWidth*2, gridWidth*2 +1],
-  [gridWidth, gridWidth+1, gridWidth+2, gridWidth*2],
+  [0, 1, 2, gridWidth],
   [0, 1, gridWidth+1, gridWidth*2 +1],
-  [gridWidth, gridWidth+1, gridWidth+2, 2]
+  [2, gridWidth, gridWidth+1, gridWidth+2],
+  [0, gridWidth, gridWidth*2, gridWidth*2 +1]
 ]
 
-const l2Shapes = [
+const jShapes = [
+  [0, 1, 2, gridWidth+2],
   [1, gridWidth+1, gridWidth*2 +1, gridWidth*2],
-  [gridWidth, gridWidth*2, gridWidth*2 +1, gridWidth*2 +2],
-  [1, 2, gridWidth+1, gridWidth*2 +1],
-  [gridWidth, gridWidth+1, gridWidth+2, gridWidth*2 +2]
+  [0, gridWidth, gridWidth+1, gridWidth+2],
+  [0, 1, gridWidth, gridWidth*2]
 ]
 
 const oShapes = [
@@ -45,27 +45,27 @@ const oShapes = [
 ]
 
 const iShapes = [
-  [1, gridWidth+1, gridWidth*2 +1, gridWidth*3 +1],
-  [gridWidth, gridWidth+1, gridWidth+2, gridWidth+3],
-  [1, gridWidth+1, gridWidth*2 +1, gridWidth*3 +1],
-  [gridWidth, gridWidth+1, gridWidth+2, gridWidth+3]
+  [0, 1, 2, 3],
+  [0, gridWidth, gridWidth*2, gridWidth*3],
+  [0, 1, 2, 3],
+  [0, gridWidth, gridWidth*2, gridWidth*3]
 ]
 
 const zShapes = [
   [0, 1, gridWidth+1, gridWidth+2],
-  [2, gridWidth+2, gridWidth+1, gridWidth*2 +1],
+  [1, gridWidth, gridWidth+1, gridWidth*2],
   [0, 1, gridWidth+1, gridWidth+2],
-  [2, gridWidth+2, gridWidth+1, gridWidth*2 +1]
+  [1, gridWidth, gridWidth+1, gridWidth*2]
 ]
 
-const z2Shapes = [
-  [gridWidth, gridWidth+1, 1, 2],
-  [1, gridWidth+1, gridWidth+2, gridWidth*2 +2],
-  [gridWidth, gridWidth+1, 1, 2],
-  [1, gridWidth+1, gridWidth+2, gridWidth*2 +2],
+const sShapes = [
+  [1, 2, gridWidth, gridWidth+1],
+  [0, gridWidth, gridWidth+1, gridWidth*2 +1],
+  [1, 2, gridWidth, gridWidth+1],
+  [0, gridWidth, gridWidth+1, gridWidth*2 +1]
 ]
 
-const allShapes = [tShapes, lShapes, l2Shapes, oShapes, iShapes, zShapes, z2Shapes]
+const allShapes = [tShapes, lShapes, jShapes, oShapes, iShapes, zShapes, sShapes]
 
 //shape, position and rotation
 let currentPosition = 3
@@ -75,16 +75,16 @@ let currentShape = allShapes[randomShape][currentRotation]
 //FPS
 let FPS = null
 //next shape and mini-grid
-let nextPosition = 2
+let nextPosition = 1
 
 let possibleNextShapes = [
-  [1, panelWidth, panelWidth+1, panelWidth+2],
-  [0, panelWidth, panelWidth*2, panelWidth*2 +1],
-  [1, panelWidth+1, panelWidth*2 +1, panelWidth*2],
+  [0, 1, 2, panelWidth+1],
+  [0, 1, 2, panelWidth],
+  [0, 1, 2, panelWidth+2],
   [0, 1, panelWidth, panelWidth+1],
-  [1, panelWidth+1, panelWidth*2 +1, panelWidth*3 +1],
+  [0, 1, 2, 3],
   [0, 1, panelWidth+1, panelWidth+2],
-  [panelWidth, panelWidth+1, 1, 2]
+  [1, 2, panelWidth, panelWidth+1],
 ]
 
 let nextRandomShape = 0

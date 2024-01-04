@@ -8,6 +8,9 @@
 
 body {
   font-family: Consolas, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url("../img/background.jpg");
+  background-size: cover;
+  color: #fff;
 }
 
 /* buttons */
@@ -81,7 +84,7 @@ button:disabled {
 .panel .score #score {
   font-size: 3rem;
   font-weight: 900;
-  color: #000;
+  color: #fff;
 }
 
 /* gameover */
@@ -90,7 +93,8 @@ button:disabled {
   display: none;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: #0005;
+  box-shadow: 1px 1px 3px #fff;
   padding: 10px;
 }
 
